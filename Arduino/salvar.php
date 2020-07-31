@@ -5,13 +5,21 @@
     $s2_rec = $_GET['s2'];
     $s3_rec = $_GET['s3'];
 
-    $SQL_INSERT = "INSERT INTO tbsensores (sensor1, sensor2, sensor3) VALUES (:S1, :S2, :S3)";
+    $umidadesolo_rec = $_GET['sensorUmidadeSolo'];
+    $sensorChuva_rec = $_GET['sensorChuva'];
+    $temperatura_rec = $_GET['sensorTemperatura'];
+    $umidadeAr_rec = $_GET['sensorUmidadeAr'];
+    $vazaoDeAgua_rec = $_GET['fluxoVazaoDeAgua'];
+
+    $SQL_INSERT = "INSERT INTO tbsensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, vazaoDeAgua) VALUES (:usolo, :schuva, :temp, :umidadear, :vazaoagua)";
 
     $stmt = $conexao->prepare($SQL_INSERT);
 
-    $stmt->bindParam(":S1", $s1_rec);
-    $stmt->bindParam(":S2", $s2_rec);
-    $stmt->bindParam(":S3", $s3_rec);
+    $stmt->bindParam(":usolo", $umidadesolo_rec);
+    $stmt->bindParam(":schuva", $sensorChuva_rec);
+    $stmt->bindParam(":temp", $temperatura_rec);
+    $stmt->bindParam(":umidadear", $umidadeAr_rec);
+    $stmt->bindParam(":vazaoagua", $vazaoDeAgua_rec);
 
     if($stmt->execute()){
         echo "insert ok";
