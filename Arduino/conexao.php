@@ -1,8 +1,8 @@
 <?php
 
-    $CON_CONEXAO = "mysql:host=cp1252;dbname=gaviaope_agroirrigadb;charset=utf8";
-    $CON_USUARIO = "gaviaope_agroirriga";
-    $CON_SENHA = "405937irriga";
+    $CON_CONEXAO = "mysql:host=localhost;dbname=gaviaope_agroirrigadb;charset=utf8";
+    $CON_USUARIO = "root";
+    $CON_SENHA = "";
 
     try{
     
@@ -14,4 +14,4 @@
         echo "Conexão_erro";
         exit;
     }
-?>://www.sunrisenet.com.br
+?>
