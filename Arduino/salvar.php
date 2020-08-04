@@ -13,7 +13,7 @@
         
     $umidadesolo_rec = random_int(1, 1024);
     $sensorChuva_rec = random_int(1, 1024);
-    $temperatura_rec = random_int(1, 1024);
+    $temperatura_rec = random_int(1, 50 );
     $umidadeAr_rec = random_int(1, 1024);
     $vazaoDeAgua_rec = random_int(1, 1024);
     
