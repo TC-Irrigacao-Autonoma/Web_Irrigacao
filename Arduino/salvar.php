@@ -37,7 +37,7 @@
         echo "insert_erro";
     }
 
-    sleep(300);
+    sleep(10);
     }
 
 ?>
