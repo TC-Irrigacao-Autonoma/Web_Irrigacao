@@ -1,3 +1,80 @@
+/* Gerais */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 80px 0;
+}
+
+p, li {
+    color: rgb(8, 8, 8);
+    font-size: 14px;
+}
+
+/* Barra de Navegação*/
+header, .navbar {
+    background-color: #265902;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    
+    width: 150px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #FFF;
+}
+
+.navbar-brand:hover {
+    color: #FFF;
+}
+
+#navbar-links a {
+    color: #FFF;
+}
+
+#navbar-links a:hover {
+    color: #A9BF04;;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0rem .8rem;
+}
+
+.card-body{
+    border-width: 6px;
+    border-style: groove;
+    border-color: #021373;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Color Theme Swatches in Hex */
 .Irrigação-Pivot-1-hex { color: #021373; }
 .Irrigação-Pivot-2-hex { color: #AEE6F2; }
@@ -18,56 +95,3 @@
 .Irrigação-Pivot-3-hsla { color: hsla(95, 96, 17, 1); }
 .Irrigação-Pivot-4-hsla { color: hsla(95, 96, 7, 1); }
 .Irrigação-Pivot-5-hsla { color: hsla(67, 96, 38, 1); }
-
-/* Gerais */
-body{
-    font-family: 'Roboto', sans-serif;
-}
-
-.row {
-    margin: 0;
-}
-
-.container {
-    padding: 7px 0;
-}
-
-p, li {
-    color: gray;
-    font-size: 14px;
-}
-
-/* Barra de Navegação*/
-header, .navbar {
-    background-color: #265902;
-}
-
-#nav-container {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-#logo {
-    width: 75px;
-}
-
-.navbar-brand {
-    padding: 0;
-    color: #FFF;
-}
-
-.navbar-brand:hover {
-    color: #FFF;
-}
-
-#navbar-links a {
-    color: #FFF;
-}
-
-#navbar-links a:hover {
-    color: rgb(44, 216, 22);
-}
-
-.navbar-expand-lg .navbar-nav .nav-link{
-    padding: 1rem .8rm;
-}
