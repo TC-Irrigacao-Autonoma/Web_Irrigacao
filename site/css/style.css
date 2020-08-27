@@ -1,3 +1,24 @@
+/* Color Theme Swatches in Hex */
+.Irrigação-Pivot-1-hex { color: #021373; }
+.Irrigação-Pivot-2-hex { color: #AEE6F2; }
+.Irrigação-Pivot-3-hex { color: #265902; }
+.Irrigação-Pivot-4-hex { color: #102601; }
+.Irrigação-Pivot-5-hex { color: #A9BF04; }
+
+/* Color Theme Swatches in RGBA */
+.Irrigação-Pivot-1-rgba { color: rgba(2, 19, 114, 1); }
+.Irrigação-Pivot-2-rgba { color: rgba(174, 229, 242, 1); }
+.Irrigação-Pivot-3-rgba { color: rgba(38, 89, 1, 1); }
+.Irrigação-Pivot-4-rgba { color: rgba(16, 38, 0, 1); }
+.Irrigação-Pivot-5-rgba { color: rgba(169, 191, 3, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Irrigação-Pivot-1-hsla { color: hsla(230, 96, 22, 1); }
+.Irrigação-Pivot-2-hsla { color: hsla(191, 72, 81, 1); }
+.Irrigação-Pivot-3-hsla { color: hsla(95, 96, 17, 1); }
+.Irrigação-Pivot-4-hsla { color: hsla(95, 96, 7, 1); }
+.Irrigação-Pivot-5-hsla { color: hsla(67, 96, 38, 1); }
+
 /* Gerais */
 body{
     font-family: 'Roboto', sans-serif;
@@ -8,7 +29,7 @@ body{
 }
 
 .container {
-    padding: 70px 0;
+    padding: 7px 0;
 }
 
 p, li {
@@ -18,7 +39,7 @@ p, li {
 
 /* Barra de Navegação*/
 header, .navbar {
-    background-color: #353D41;
+    background-color: #265902;
 }
 
 #nav-container {
