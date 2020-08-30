@@ -14,15 +14,22 @@ $('document').ready(function() {
         url: "chart.php",
         dataType: "json",
         success: function (data) {
-            var nomearray = [];
-            for (var i = 0; i < data.length; i++){
-                nomearray.push(data[i].umidadeSolo);
-            }
             
+            var umidadeSoloarray = [];
+            var dataHoraarray = [];
+
+            for (var i = 0; i <data.length; i++){ //atibui os dados do banco a uma array respectivo ao indice
+                umidadeSoloarray.push(data[i].umidadeSolo   ); 
+                dataHoraarray.push(data[i].dataHora)
+            }  
+            grafico(umidadeSoloarray, dataHoraarray);//faz a chamada da função para executar o gráfico
         }
     });
 })
 
+function grafico(umidadeSoloP, dataHoraP) { //tras os parametros criados dos dados umidadeSoloarray, dataHoraarray
+
+//********* GRÁFICO CHART.JS****************************** */
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -30,15 +37,25 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: dataHoraP,
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: ['green', 'blue', 'red'],
+            backgroundColor: 'blue',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            data: umidadeSoloP
         }]
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
 });
+
+}
