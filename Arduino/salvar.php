@@ -9,7 +9,7 @@
     $vazaoDeAgua_rec = $_GET['fluxoVazaoDeAgua'];
     */
 
-    while(true){
+    //while(true){
         
     $umidadesolo_rec = random_int(1, 1024);
     $sensorChuva_rec = random_int(1, 1024);
@@ -19,7 +19,7 @@
     
     
 
-    echo "numero aleatório =" .$umidadesolo_rec;
+    echo "numero aleatório = $umidadesolo_rec";
 
     $SQL_INSERT = "INSERT INTO tbsensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, vazaoDeAgua) VALUES (:usolo, :schuva, :temp, :umidadear, :vazaoagua)";
 
