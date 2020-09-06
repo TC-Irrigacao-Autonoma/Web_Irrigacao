@@ -11,7 +11,7 @@ chart.fillRect(, 0, 100, 200);*/
 $('document').ready(function() {
     $.ajax({
         type: "POST",
-        url: "consulta.php",
+        url: "consultaSemanal.php",
         dataType: "json",
         success: function (data) {
             
@@ -21,7 +21,7 @@ $('document').ready(function() {
             var temperatura_array = [];
 
             for (var i = 0; i <data.length; i++){ //atibui os dados do banco a uma array respectivo ao indice
-                umidadeSolo_array.push(data[i].umidadeSolo   ); 
+                umidadeSolo_array.push(data[i].umidadeSolo); 
                 dataHora_array.push(data[i].dataHora);
                 umidadeDoAr_array.push(data[i].umidadeAr);
                 temperatura_array.push(data[i].temperatura)
