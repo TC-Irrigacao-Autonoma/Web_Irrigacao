@@ -1,5 +1,6 @@
 <?php
 
+
 /*  $CON_CONEXAO = "mysql:host=localhost;dbname=bdarduino;charset=utf8";
     $CON_USUARIO = "root";
     $CON_SENHA = "";

@@ -45,7 +45,7 @@ function graficoSoloDiario(umidadeSolo, dataHoraP) { //tras os parametros criado
         data: {
             labels: dataHoraP,
             datasets: [{
-                label: 'My First dataset',
+                label: 'Umidade do solo Diario',
                 backgroundColor: 'blue',
                 borderColor: 'rgb(255, 99, 132)',
                 data: umidadeSolo
