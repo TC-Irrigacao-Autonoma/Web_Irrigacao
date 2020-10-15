@@ -19,16 +19,20 @@ p, li {
 /* Barra de Navegação*/
 header, .navbar {
     background-color: #265902;
+    
 }
 
 #nav-container {
     padding-top: 0;
     padding-bottom: 0;
+  
 }
 
 #logo {
-    
     width: 150px;
+
+    position:relative;
+    left:400%;
 }
 
 .navbar-brand {
