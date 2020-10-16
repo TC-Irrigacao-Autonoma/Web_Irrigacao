@@ -1,27 +1,15 @@
 <?php
     include "conexao.php";
 
-    /*
-    $umidadesolo_rec = $_GET['sensorUmidadeSolo'];
-    $sensorChuva_rec = $_GET['sensorChuva'];
-    $temperatura_rec = $_GET['sensorTemperatura'];
-    $umidadeAr_rec = $_GET['sensorUmidadeAr'];
-    $vazaoDeAgua_rec = $_GET['fluxoVazaoDeAgua'];
-    */
 
-    //while(true){
-        
-    $umidadesolo_rec = random_int(1, 1024);
-    $sensorChuva_rec = random_int(1, 1024);
-    $temperatura_rec = random_int(1, 50 );
-    $umidadeAr_rec = random_int(1, 1024);
-    $vazaoDeAgua_rec = random_int(1, 1024);
-    
+    $umidadesolo_rec = $_GET['umidadeSolo'];
+    $sensorChuva_rec = $_GET['chuva'];
+    $temperatura_rec = $_GET['temperatura'];
+    $umidadeAr_rec = $_GET['umidadeAr'];
+    $valvulaSolenoide_rec = $_GET['valvulaSolenoide'];
     
 
-    echo "numero aleatório = $umidadesolo_rec";
-
-    $SQL_INSERT = "INSERT INTO tbsensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, vazaoDeAgua) VALUES (:usolo, :schuva, :temp, :umidadear, :vazaoagua)";
+    $SQL_INSERT = "INSERT INTO tbsensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, valvulaSolenoide) VALUES (:usolo, :schuva, :temp, :umidadear, :solenoide)";
 
     $stmt = $conexao->prepare($SQL_INSERT);
 
@@ -29,7 +17,7 @@
     $stmt->bindParam(":schuva", $sensorChuva_rec);
     $stmt->bindParam(":temp", $temperatura_rec);
     $stmt->bindParam(":umidadear", $umidadeAr_rec);
-    $stmt->bindParam(":vazaoagua", $vazaoDeAgua_rec);
+    $stmt->bindParam(":solenoide", $valvulaSolenoide_rec);
 
     if($stmt->execute()){
         echo "insert ok";
@@ -37,8 +25,7 @@
         echo "insert_erro";
     }
 
-    sleep(300);
-    }
+
 
     
 ?>
