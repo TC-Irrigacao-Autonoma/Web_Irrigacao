@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+<link href="font/esetor.css" rel="stylesheet">
+<style>
+	@import url("css/setor/style.css");
+</style>
+</head>
+
+<body>
+      <div class="colorful-switch" >
+        <input type="checkbox" style=" position: relative; top: 20px;" class="colorful-switch__checkbox" class="colorful-switch" id="cozinha" onClick="circuito(1,'quarto');"/>
+          <label class="colorful-switch__label" for="cozinha">
+            <span class="colorful-switch__bg"></span>
+            <span class="colorful-switch__dot"></span>
+            <span class="colorful-switch__on">
+            	<span class="colorful-switch__on__inner" ></span>
+            </span>
+            <span  class="colorful-switch__off"></span>
+          </label>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div style="width:100%; height:100px; background-color:#FFFFFF; box-shadow: 5px 5px 5px #191919; border-radius: 30px;">
+            <font class="palavra">QUARTO</font>
+        </div>
+        <br>
+    
+
+        <div class="colorful-switch2" >
+            <input type="checkbox" style=" position: relative; top: 20px;" class="colorful-switch__checkbox" id="cozinha2" onClick="circuito(2,'sala');"/>
+              <label class="colorful-switch__label" for="cozinha2">
+                <span class="colorful-switch__bg" ></span>
+                <span class="colorful-switch__dot" ></span>
+                <span class="colorful-switch__on">
+                  <span class="colorful-switch__on__inner" ></span>
+                </span>
+                <span  class="colorful-switch__off"></span>
+              </label>
+    	</div>  
+        <div style="width:100%; height:100px; background-color:#FFFFFF; box-shadow: 5px 5px 5px #191919; border-radius: 30px;">
+            <font class="palavra">SALA</font>
+        </div>
+        <br> 
+           
+
+        <div class="colorful-switch3" >
+        <input type="checkbox" style=" position: relative;
+    					top: 20px;" class="colorful-switch__checkbox" id="cozinha3" onClick="circuito(3,'cozinha');" />
+          <label class="colorful-switch__label" for="cozinha3">
+            <span class="colorful-switch__bg" ></span>
+            <span class="colorful-switch__dot" ></span>
+            <span class="colorful-switch__on">
+              <span class="colorful-switch__on__inner" ></span>
+            </span>
+            <span  class="colorful-switch__off"></span>
+          </label>
+        </div>
+        <div style="width:100%; height:100px; background-color:#FFFFFF; box-shadow: 5px 5px 5px #191919; border-radius: 30px;"> 
+            <font class="palavra">COZINHA</font>
+        </div>
+       
+<div id="circuito1" style="top:900px;"></div><br/><br/><br/>
+<div id="circuito2"></div><br/><br/><br/>
+<div id="circuito3"></div>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+//<?php
+	//$ip = file_get_contents("C:/wamp64/www/php/ip.txt"); //pega o endereco ip dentro do arquivo .txt
+//?>
+	function circuito(num,setor){
+		document.getElementById("circuito"+num).innerHTML = "<iframe frameborder='0' width='0px' height='0px' src='http://10.0.10.216/?"+setor+"'></iframe>"; //<?php echo $ip; ?>
+		console.log("<iframe width='0%' height='0%' src='http://10.0.10.216/?"+setor+"'></iframe>"); 
+	}
+</script> 
+</body>
+</html>
