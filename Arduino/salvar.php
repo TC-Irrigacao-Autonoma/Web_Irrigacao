@@ -15,7 +15,7 @@
 
     $stmt->bindParam(":usolo", $umidadesolo_rec);
     $stmt->bindParam(":schuva", $sensorChuva_rec);
-    $stmt->bindParam(":temp", $temperatura_rec);
+    $stmt->bindParam(":temp", $temperatura_rec);    
     $stmt->bindParam(":umidadear", $umidadeAr_rec);
     $stmt->bindParam(":solenoide", $valvulaSolenoide_rec);
 
