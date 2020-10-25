@@ -1,4 +1,9 @@
 /* Gerais */
+.imagemDeFundo{
+    width: 400px;
+    height: 400px;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
 }
