@@ -7,9 +7,11 @@
     $temperatura_rec = $_GET['temperatura'];
     $umidadeAr_rec = $_GET['umidadeAr'];
     $valvulaSolenoide_rec = $_GET['valvulaSolenoide'];
+    $hora_rec = $_GET['hora'];
+    
     
 
-    $SQL_INSERT = "INSERT INTO tbsensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, valvulaSolenoide) VALUES (:usolo, :schuva, :temp, :umidadear, :solenoide)";
+    $SQL_INSERT = "INSERT INTO tbsensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, valvulaSolenoide, hora) VALUES (:usolo, :schuva, :temp, :umidadear, :solenoide, :hora)";
 
     $stmt = $conexao->prepare($SQL_INSERT);
 
@@ -18,6 +20,8 @@
     $stmt->bindParam(":temp", $temperatura_rec);    
     $stmt->bindParam(":umidadear", $umidadeAr_rec);
     $stmt->bindParam(":solenoide", $valvulaSolenoide_rec);
+    $stmt->bindParam(":hora", $hora_rec);
+  
 
     if($stmt->execute()){
         echo "insert ok";
