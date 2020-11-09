@@ -1,7 +1,14 @@
 /* Gerais */
+.minhaClass {
+    float:left;
+    width:100%;
+    height:560px;
+    background:url(../img/plantacao.jpg);
+  }
+
 .imagemDeFundo{
-    width: 400px;
-    height: 400px;
+    width: 1500px;
+    height: 300px;
 }
 
 body{
