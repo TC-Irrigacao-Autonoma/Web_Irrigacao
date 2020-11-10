@@ -1,5 +1,6 @@
 <?php
 
+
 /*  $CON_CONEXAO = "mysql:host=localhost;dbname=bdarduino;charset=utf8";
     $CON_USUARIO = "root";
     $CON_SENHA = "";
@@ -9,7 +10,8 @@
 $pdo = new PDO ('mysql:host=localhost;dbname=bdarduino;port=3306;charset=utf8', 'root', '');
 
 //Consulta dos ultimos 7 dias 
-$sql = "SELECT umidadeSolo, temperatura, umidadeAr, sensorChuva, valvulaSolenoide, datatb FROM tbsensores WHERE id BETWEEN 257 and 263";
+$sql = "SELECT umidadeSolo, temperatura, umidadeAr, sensorChuva, valvulaSolenoide, datatb FROM tbsensores WHERE id = '279' ";
+
 
 $statement = $pdo->prepare($sql);
 
