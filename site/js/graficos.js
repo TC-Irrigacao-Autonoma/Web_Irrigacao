@@ -23,7 +23,7 @@ $('document').ready(function() {
 
             for (var i = 0; i <data.length; i++){ //atibui os dados do banco a uma array respectivo ao indice
                 umidadeSolo_array.push(data[i].umidadeSolo); 
-                dataHora_array.push(data[i].dataHora);
+                dataHora_array.push(data[i].datatb);
                 umidadeDoAr_array.push(data[i].umidadeAr);
                 temperatura_array.push(data[i].temperatura)
             }  
@@ -250,7 +250,7 @@ function graficoSoloSemanal(umidadeSolo, dataHoraP) { //tras os parametros criad
 
 //====================================================================================================================
 
-// ------------ CONSULTA MENSAL -----------------------
+// ------------ CONSULTA SEMANAL -----------------------
 $('document').ready(function() {
     $.ajax({
         type: "POST",
@@ -265,20 +265,20 @@ $('document').ready(function() {
 
             for (var i = 0; i <data.length; i++){ //atibui os dados do banco a uma array respectivo ao indice
                 umidadeSolo_array.push(data[i].umidadeSolo); 
-                dataHora_array.push(data[i].dataHora);
+                dataHora_array.push(data[i].datatb);
                 umidadeDoAr_array.push(data[i].umidadeAr);
                 temperatura_array.push(data[i].temperatura)
             }  
-            graficoSoloMensal(umidadeSolo_array, dataHora_array);//faz a chamada da função para executar o gráfico
-            graficoTempMensal(temperatura_array, dataHora_array);
-            graficoArMensal(umidadeDoAr_array, dataHora_array);
+            graficoSoloSemanal(umidadeSolo_array, dataHora_array);//faz a chamada da função para executar o gráfico
+            graficoTempSemanal(temperatura_array, dataHora_array);
+            graficoArSemanal(umidadeDoAr_array, dataHora_array);
         }
     });
 })
 
 //  ---------------------- GRÁFICO UMIDADE DO SOLO -----------------------------------------------------
-function graficoSoloMensal(umidadeSolo, dataHoraP) { //tras os parametros criados dos dados umidadeSoloarray, dataHoraarray
-    var ctx = document.getElementById('graficoUmidadeSoloMensal').getContext('2d');
+function graficoSoloSemanal(umidadeSolo, dataHoraP) { //tras os parametros criados dos dados umidadeSoloarray, dataHoraarray
+    var ctx = document.getElementById('graficoUmidadeSoloSemanal').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'bar',
@@ -308,8 +308,8 @@ function graficoSoloMensal(umidadeSolo, dataHoraP) { //tras os parametros criado
     }
     
     //  ---------------------- GRÁFICO TEMPERATURA -----------------------------------------------------
-    function graficoTempMensal(temperatura, dataHoraP) { //tras os parametros criados dos dados umidadeSoloarray, dataHoraarray
-        var ctx = document.getElementById('graficoTemperaturaMensal').getContext('2d');
+    function graficoTempSemanal(temperatura, dataHoraP) { //tras os parametros criados dos dados umidadeSoloarray, dataHoraarray
+        var ctx = document.getElementById('graficoTemperaturaSemanal').getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'bar',
@@ -339,8 +339,8 @@ function graficoSoloMensal(umidadeSolo, dataHoraP) { //tras os parametros criado
         }
     
         //  ---------------------- GRÁFICO UMIDADE DO AR -----------------------------------------------------
-    function graficoArMensal(umidadeAr, dataHoraP) { //tras os parametros criados dos dados umidadeSoloarray, dataHoraarray
-        var ctx = document.getElementById('graficoUmidadeArMensal').getContext('2d');
+    function graficoArSemanal(umidadeAr, dataHoraP) { //tras os parametros criados dos dados umidadeSoloarray, dataHoraarray
+        var ctx = document.getElementById('graficoUmidadeArSemanal').getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'bar',

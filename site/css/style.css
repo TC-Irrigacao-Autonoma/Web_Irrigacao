@@ -7,8 +7,8 @@
   }
 
 .imagemDeFundo{
-    width: 1500px;
-    height: 300px;
+    float:left;
+    
 }
 
 body{

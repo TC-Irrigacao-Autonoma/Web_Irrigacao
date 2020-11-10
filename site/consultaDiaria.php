@@ -10,7 +10,7 @@
 $pdo = new PDO ('mysql:host=localhost;dbname=bdarduino;port=3306;charset=utf8', 'root', '');
 
 //Consulta dos ultimos 7 dias 
-$sql = "SELECT ROUND(((1024 - umidadeSolo) * 100)/1024) AS 'umidadeSolo', umidadeAr, temperatura, dataHora FROM tbsensores WHERE dataHora BETWEEN CURRENT_DATE() -70 AND CURRENT_DATE()";
+$sql = "SELECT umidadeSolo, temperatura, umidadeAr, sensorChuva, valvulaSolenoide, datatb FROM tbsensores WHERE id BETWEEN 257 and 258";
 
 $statement = $pdo->prepare($sql);
 
