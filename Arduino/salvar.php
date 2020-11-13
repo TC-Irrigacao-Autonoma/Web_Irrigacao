@@ -7,9 +7,20 @@
     $temperatura_rec = $_GET['temperatura'];
     $umidadeAr_rec = $_GET['umidadeAr'];
     $valvulaSolenoide_rec = $_GET['valvulaSolenoide'];
+    if($valvulaSolenoide_rec == 1){
+        $valvulaSolenoide_rec = "LIGADO";
+    }else{
+        $valvulaSolenoide_rec = "DESLIGADO";
+    }
+    if($sensorChuva_rec == 1){
+        $sensorChuva_rec = "SEM CHUVA";
+    }
+    else{
+        $sensorChuva_rec = "CHOVENDO";
+    }
     
 
-    $SQL_INSERT = "INSERT INTO tbsensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, valvulaSolenoide) VALUES (:usolo, :schuva, :temp, :umidadear, :solenoide)";
+    $SQL_INSERT = "INSERT INTO sensores (umidadeSolo, sensorChuva, temperatura, umidadeAr, valvulaSolenoide) VALUES (:usolo, :schuva, :temp, :umidadear, :solenoide)";
 
     $stmt = $conexao->prepare($SQL_INSERT);
 

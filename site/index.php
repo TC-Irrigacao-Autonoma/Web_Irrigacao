@@ -1,9 +1,9 @@
 <?php
 
-$pdo = new PDO ('mysql:host=localhost;dbname=bdarduino;port=3306;charset=utf8', 'root', '');
+$pdo = new PDO ('mysql:host=localhost;dbname=cartol30_agroirriga;port=3306;charset=utf8', 'cartol30_anderson', '221044anderson');
 
 //Consulta dos ultimos 7 dias 
-$sql = "SELECT umidadeSolo, temperatura, umidadeAr, sensorChuva, valvulaSolenoide, datatb FROM tbsensores WHERE id = '279' ";
+$sql = "SELECT umidadeSolo, temperatura, umidadeAr, sensorChuva, valvulaSolenoide FROM sensores ORDER BY id DESC LIMIT 1; ";
 
 $statement = $pdo->prepare($sql);
 
@@ -40,6 +40,8 @@ while($registro = $statement->fetch(PDO::FETCH_ASSOC)){
   <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
   <!-- Progress Bar -->
  
+  <meta http-equiv="refresh" content="2;url=https://agroirriga.cartolex.life/agroirrigaftp/agroirriga/">
+  
 </head>
 
 <body>
@@ -74,8 +76,8 @@ while($registro = $statement->fetch(PDO::FETCH_ASSOC)){
   </div>
 
 </div>
-    <div class="container text-center col-md-9" style="margin-bottom: 3rem">
-      <div class="card float-right" style="width: 10rem;">
+    <div id="tempoReal" class="container text-center col-md-9" style="margin-bottom: 3rem">
+      <div class="card float-right" style="width: 11rem;">
         <div class="card-body">
           <h5 class="card-title" style="margin-bottom: 3rem;">Irrigação 🚿</h5>
             <p class="card-text" style="font-size: 1.5rem"><?php echo($solenoide);?></p>
@@ -139,6 +141,18 @@ while($registro = $statement->fetch(PDO::FETCH_ASSOC)){
   </div>
   <div class="container">  
   </div>
+
+  <script>
+    $(function() {
+   setTime();
+   function setTime() {
+      var date = new Date().getTime();
+      var string = "Timestamp: "+date;
+      setTimeout(setTime, 3000);
+      $('#tempoReal').html(string);
+   }
+ });
+  </script>
   
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
